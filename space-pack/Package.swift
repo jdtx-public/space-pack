@@ -5,6 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "space-pack",
+    platforms: [
+        SupportedPlatform.iOS(.v18),
+        SupportedPlatform.macOS(.v15),
+        SupportedPlatform.macCatalyst(.v18),
+        SupportedPlatform.visionOS(.v1),
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -12,7 +18,8 @@ let package = Package(
             targets: ["space-pack"]),
     ],
     dependencies: [
-        .package(path: "../novas-lib/")
+        .package(path: "../novas-lib/"),
+        .package(path: "../cspice-lib/")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -21,6 +28,7 @@ let package = Package(
             name: "space-pack",
             dependencies: [
                 .product(name: "novas-lib", package: "novas-lib"),
+                .product(name: "cspice-lib", package: "cspice-lib")
             ]),
         .testTarget(
             name: "space-packTests",
