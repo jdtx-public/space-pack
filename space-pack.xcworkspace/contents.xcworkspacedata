@@ -4,4 +4,7 @@
    <FileRef
       location = "group:novas-lib">
    </FileRef>
+   <FileRef
+      location = "group:space-pack">
+   </FileRef>
 </Workspace>
