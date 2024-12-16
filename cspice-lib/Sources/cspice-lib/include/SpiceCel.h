@@ -254,6 +254,9 @@
    -CSPICE Version 1.0.0, 22-AUG-2002 (NJB)  
 
 */
+
+#include "SpiceZdf.h"
+
 #ifndef HAVE_SPICE_CELLS_H
 
    #define HAVE_SPICE_CELLS_H

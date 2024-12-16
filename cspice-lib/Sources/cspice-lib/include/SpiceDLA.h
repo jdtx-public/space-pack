@@ -231,6 +231,8 @@
 
 */
 
+#include "SpiceZdf.h"
+
 #ifndef HAVE_SPICE_DLA_H
 
    #define HAVE_SPICE_DLA_H
