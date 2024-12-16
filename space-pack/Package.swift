@@ -18,7 +18,10 @@ let package = Package(
             targets: ["space-pack"]),
         .library(
             name: "novas-swift",
-            targets: ["novas-swift"])
+            targets: ["novas-swift"]),
+        .library(
+            name: "cspice-swift",
+            targets: ["cspice-swift"])
     ],
     dependencies: [
         .package(path: "../novas-lib/"),
@@ -37,6 +40,11 @@ let package = Package(
             name: "novas-swift",
             dependencies: [
                 .product(name: "novas-lib", package: "novas-lib")
+            ]),
+        .target(
+            name: "cspice-swift",
+            dependencies: [
+                .product(name: "cspice-lib", package: "cspice-lib")
             ]),
         .testTarget(
             name: "space-packTests",
