@@ -26,11 +26,11 @@ public class SolarSystem {
             199: "Mercury" ,
             299: "Venus" ,
             399: "Earth",
-            499: "Mars" ,
-            599: "Jupiter" ,
-            699: "Saturn" ,
-            799: "Uranus" ,
-            899: "Neptune"
+            4: "Mars" ,
+            5: "Jupiter" ,
+            6: "Saturn" ,
+            7: "Uranus" ,
+            8: "Neptune"
         ]
         
         var localPlanets = [String: PlanetBody]()
