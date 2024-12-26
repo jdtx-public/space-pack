@@ -15,6 +15,7 @@
 
 import Foundation
 import cspice_lib
+import simd
 
 public class PlanetBody {
     private let _name: String
@@ -26,4 +27,8 @@ public class PlanetBody {
     }
     
     // TODO: store other properties like mass or radius or whatever here
+    
+    public func solarPosition(atDate date: Date) -> simd_double3 {
+        return PlanetCalc.calcPosition(ofPlanet: _naifId, atTime: date)
+    }
 }

@@ -16,10 +16,10 @@
 import Foundation
 import cspice_lib
 
-class Kernel {
+public class Kernel {
     public let filePath: String
     
-    init (withFilePath: String) {
+    public init (withFilePath: String) {
         filePath = withFilePath
         furnsh_c(filePath)
     }

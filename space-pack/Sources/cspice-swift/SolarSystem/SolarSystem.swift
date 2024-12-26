@@ -39,6 +39,12 @@ public class SolarSystem {
                 localPlanets[name] = PlanetBody(name: name, naifId: key)
         }
         
+        localPlanets["Sun"] = sun
+        
         _planets = localPlanets
+    }
+    
+    public subscript(name: String) -> PlanetBody? {
+        return _planets[name]
     }
 }

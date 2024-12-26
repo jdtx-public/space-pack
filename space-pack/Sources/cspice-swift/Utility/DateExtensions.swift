@@ -15,10 +15,11 @@ public extension Date {
     }
     
     var ephemerisTime : Double {
-        let jd = self.julian
+        let components = DateComponents(year: 2000, month: 1, day: 1, hour: 0, minute: 0, second: 0)
+        let refDate = Calendar.current.date(from: components)!
         
-        // until we get ephemeris figured out, just return julian time
-        // let retVal = unitim_c(jd, "JED", "ET")
-        return jd
+        let dateDiff = self.timeIntervalSince(refDate)
+        
+        return dateDiff
     }
 }
