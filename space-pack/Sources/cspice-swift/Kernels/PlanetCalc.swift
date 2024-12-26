@@ -25,7 +25,7 @@ public class PlanetCalc {
     public static func calcPosition(ofPlanet: Int32, atTime: Date) -> simd_double3 {
         var pos: [SpiceDouble] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         var lt: [SpiceDouble] = [0.0]
-        let et = atTime.julian
+        let et = atTime.ephemerisTime
         spkezp_c(ofPlanet, et, "J2000", "NONE", 0, &pos, &lt)
         
         let planetPos = simd_double3(pos[0], pos[1], pos[2])
