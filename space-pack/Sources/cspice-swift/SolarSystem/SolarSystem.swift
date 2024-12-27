@@ -26,8 +26,13 @@ public class SolarSystem {
             199: "Mercury" ,
             299: "Venus" ,
             399: "Earth",
+            301: "Moon",
             4: "Mars" ,
             5: "Jupiter" ,
+            501: "Io",
+            502: "Europa",
+            503: "Ganymede",
+            504: "Callisto",
             6: "Saturn" ,
             7: "Uranus" ,
             8: "Neptune"
