@@ -35,7 +35,8 @@ public class SolarSystem {
             504: "Callisto",
             6: "Saturn" ,
             7: "Uranus" ,
-            8: "Neptune"
+            8: "Neptune",
+            9: "Pluto"
         ]
         
         var localPlanets = [String: PlanetBody]()
